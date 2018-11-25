@@ -10,24 +10,25 @@ import { Subscription } from 'rxjs';
 })
 export class ShoppingListComponent implements OnInit, OnDestroy {
 
-  ingredients: Ingredient [];
+  ingredients: Ingredient[];
   private subscription: Subscription;
   constructor(private ingredientsService: IngredientsService) { }
 
   ngOnInit() {
     this.ingredients = this.ingredientsService.getIngredients();
-    this.ingredientsService.ingredientsChanged
-    .subscribe(
-      ((ingredients: Ingredient[]) => {
-        this.ingredients = ingredients;
-      })
-    );
+    this.subscription = this.ingredientsService.ingredientsChanged
+      .subscribe(
+        ((ingredients: Ingredient[]) => {
+          this.ingredients = ingredients;
+        })
+      );
   }
 
-  ngOnDestroy(){
-    this.subscription.unsubscribe;
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
-  onEditItem(index: number){
+
+  onEditItem(index: number) {
     this.ingredientsService.startedEditing.next(index);
   }
 
