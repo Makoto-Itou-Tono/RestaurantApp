@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   private subscription: Subscription;
 
   ngOnInit() {
-    this.editMode = this.authService.isUserLoggedIn();
+    this.editMode = this.authService.UserLogged();
     this.subscription = this.authService.AuhtNext.subscribe(
       (element: boolean) => {
         this.editMode = element;
@@ -22,8 +22,8 @@ export class HeaderComponent implements OnInit {
     );
   }
 
-  Cambio() {
-    this.authService.isxD();
+  change() {
+    this.authService.authentication();
   }
 
   ngOnDestroy() {

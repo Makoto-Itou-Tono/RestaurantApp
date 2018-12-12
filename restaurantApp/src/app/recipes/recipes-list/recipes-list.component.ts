@@ -22,7 +22,7 @@ export class RecipesListComponent implements OnInit {
     })
   }
 
-  onNewRecipe(){
+  onAddNewRecipe(){
     this.router.navigate(['new'],{relativeTo:this.route});
   }
 

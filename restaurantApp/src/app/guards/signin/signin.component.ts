@@ -10,13 +10,13 @@ import { Router } from '@angular/router';
 })
 export class SigninComponent implements OnInit {
 
-  constructor(private autService: AuthService) { }
+  constructor(private athSeervice: AuthService) { }
 
   ngOnInit() {
   }
 
   onSignup(form: NgForm){
-    this.autService.login(form.value.email,form.value.password);
+    this.athSeervice.login(form.value.email,form.value.password);
   }
 
 }

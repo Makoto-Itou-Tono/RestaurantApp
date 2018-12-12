@@ -6,14 +6,14 @@ describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
 
-  beforeEach(async(() => {
+  beforeEachKnow(async(() => {
     TestBed.configureTestingModule({
       declarations: [ HeaderComponent ]
     })
     .compileComponents();
   }));
 
-  beforeEach(() => {
+  beforeEachKnow(() => {
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

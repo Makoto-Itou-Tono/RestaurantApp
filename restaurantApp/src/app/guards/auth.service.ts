@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  private isLoggedIn: boolean = false;
+  private Logged: boolean = false;
 
   AuhtNext = new Subject<boolean>();
 
@@ -14,23 +14,23 @@ export class AuthService {
 
   login(email: string, password: string): boolean{
     console.log(email+ ' ' + password);
-    if (email == "luis@gmail.com" && password == "12345") {
-      this.isLoggedIn = true;
+    if (email == "Carlos@live.com" && password == "54321") {
+      this.Logged = true;
       this.router.navigate(['/recipes']);
     } else {
-      this.isLoggedIn = false;
+      this.Logged = false;
     }
-    this.AuhtNext.next(this.isLoggedIn);
-    return this.isLoggedIn;
+    this.AuhtNext.next(this.Logged);
+    return this.Logged;
   }
 
-  isUserLoggedIn() {
-    return this.isLoggedIn;
+  UserLogged() {
+    return this.Logged;
   }
 
-  isxD() {
-    this.isLoggedIn = false;
-    this.AuhtNext.next(this.isLoggedIn);
+  authentication() {
+    this.Logged = false;
+    this.AuhtNext.next(this.Logged);
   }
 
 }

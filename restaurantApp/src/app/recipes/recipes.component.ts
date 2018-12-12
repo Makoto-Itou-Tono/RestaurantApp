@@ -17,6 +17,6 @@ export class RecipesComponent implements OnInit {
       //(recipe: Recipe) => {
         //this.recipeSelected = recipe;
       //}
-    //);//Subcribe estara a la escucha de algun cambio
+    //);//Subcribe estara a la escucha de algun change
   }
 }

@@ -3,12 +3,12 @@ import { AppPage } from './app.po';
 describe('workspace-project App', () => {
   let page: AppPage;
 
-  beforeEach(() => {
+  beforeEachKnow(() => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display welcome message Gaikoku no', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to RestaurantApp!');
+    expect(page.getParagraphText()).toEqual('Welcome to RestaurantApp! Gaikoku no');
   });
 });
